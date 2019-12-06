@@ -1,1 +1,1 @@
-# marvelApp
+# Marvel Comic Store App
