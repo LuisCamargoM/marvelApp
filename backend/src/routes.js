@@ -3,7 +3,7 @@ import { Router } from "express";
 
 /* CONTROLLERS */
 import UserController from "./app/controllers/UserController";
-// import CartController from "./app/controllers/CartController";
+import ApiController from "./app/controllers/ApiController";
 import SessionController from "./app/controllers/SessionController";
 
 /* MIDDLEWARES */
@@ -16,6 +16,8 @@ const routes = new Router();
 // routes.post("/cart", authStateData, CartController.store);
 
 routes.post("/login", SessionController.store);
+
+routes.post("/api/comics", ApiController.getComics);
 
 routes.get("/users", UserController.show);
 routes.post("/users", UserController.store);
