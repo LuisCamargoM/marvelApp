@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { Form, FormGroup, Input, Button } from "reactstrap";
 // import Header from "../../components/Header";
-import axios from "axios";
+// import axios from "axios";
 
 export default class Login extends Component {
   constructor(props) {
@@ -25,27 +25,29 @@ export default class Login extends Component {
     e.preventDefault();
     const { email, password } = this.state;
 
-    const session = {
-      email,
-      password
-    };
+    if(email === 'admin@gmail.com' && password === 'admin1234'){
+      this.props.history.push("/home");
+    }
+    // const session = {
+    //   email,
+    //   password
+    // };
+    // axios
+    //   .post("http://localhost:3333/login", session)
+    //   .then(response => {
+    //     this.setState({ success: true });
+    //     this.setState({ message: "Signing In.." });
 
-    axios
-      .post("http://localhost:3333/login", session)
-      .then(response => {
-        this.setState({ success: true });
-        this.setState({ message: "Signing In.." });
-
-        const { token } = response.data;
-        localStorage.setItem("token", token);
-        this.props.history.push("/home");
-        return;
-      })
-      .then(token => token)
-      .catch(err => {
-        console.log(err);
-        this.setState({ message: "Invalid LogIn.." });
-      });
+    //     const { token } = response.data;
+    //     localStorage.setItem("token", token);
+    //     this.props.history.push("/home");
+    //     return;
+    //   })
+    //   .then(token => token)
+    //   .catch(err => {
+    //     console.log(err);
+    //     this.setState({ message: "Invalid LogIn.." });
+    //   });
   };
 
   render() {

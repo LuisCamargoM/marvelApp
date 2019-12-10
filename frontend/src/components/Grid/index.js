@@ -1,201 +1,128 @@
-import React from "react";
+import React, { Component } from "react";
 import {
   Col,
   Card,
   Button,
-  CardImg,
-  CardTitle,
-  CardText,
-  InputGroup, InputGroupAddon,
+  InputGroup,
+  InputGroupAddon,
   Input,
   CardGroup,
-  CardSubtitle,
-  CardBody
+  CardBody,
+  Pagination,
+  Form
 } from "reactstrap";
 
-import deadpool1 from "../../img/comic1.jpeg";
-import deadpool2 from "../../img/comic2.jpeg";
-import deadpool3 from "../../img/comic3.jpeg";
-import deadpool4 from "../../img/comic4.jpg";
-import deadpool5 from "../../img/comic5.jpg";
-
 import { FormGroup } from "@material-ui/core";
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
 
-const Grid = props => {
-  return (
-    <div>
-      <FormGroup className="searchForm">
-        <InputGroup>
-          <Input placeholder="Find your favorite Commic Storie"/>
-          <InputGroupAddon addonType="append">
-            <Button color="danger">
-              <SearchIcon/>
-            </Button>
-          </InputGroupAddon>
-        </InputGroup>
-        <br />
-      </FormGroup>
-      <CardGroup className="Group">
-        <Col xs="3">
-          <Card className="flip-card">
-            <CardBody className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={deadpool1} alt="Logo" />
-              </div>
-              <div className="flip-card-back">
-                <h4 className="cardTitle">DESCRIÇAO</h4>
-                <div className="col-12 float-right text">
-                  <p className="cardDesc">
-                    Deadpool is a film for the fans. The fans who wanted him just
-                    as lewd and crude in celluloid as he is in the comics, who
-                    suffered through both his and Reynolds' mistreatment in films
-                    past, and who flung desperate tweets 'round the internet when
-                    they heard that maybe, just maybe, they might get a loyal
-                    depiction if they begged hard enough.
-                  </p>
-                </div>
-                <button className="addToCart"> + ADD TO CART</button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="3">
-          <Card className="flip-card">
-            <CardBody className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={deadpool2} alt="Logo" />
-              </div>
-              <div className="flip-card-back">
-                <h4 className="cardTitle">DESCRIÇAO</h4>
-                <div className="col-12 float-right text">
-                  <p className="cardDesc">
-                    Deadpool is a film for the fans. The fans who wanted him just
-                    as lewd and crude in celluloid as he is in the comics, who
-                    suffered through both his and Reynolds' mistreatment in films
-                    past, and who flung desperate tweets 'round the internet when
-                    they heard that maybe, just maybe, they might get a loyal
-                    depiction if they begged hard enough.
-                  </p>
-                </div>
-                <button className="addToCart"> + ADD TO CART</button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="3">
-          <Card className="flip-card">
-            <CardBody className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={deadpool3} alt="Logo" />
-              </div>
-              <div className="flip-card-back">
-                <h4 className="cardTitle">DESCRIÇAO</h4>
-                <div className="col-12 float-right text">
-                  <p className="cardDesc">
-                    Deadpool is a film for the fans. The fans who wanted him just
-                    as lewd and crude in celluloid as he is in the comics, who
-                    suffered through both his and Reynolds' mistreatment in films
-                    past, and who flung desperate tweets 'round the internet when
-                    they heard that maybe, just maybe, they might get a loyal
-                    depiction if they begged hard enough.
-                  </p>
-                </div>
-                <button className="addToCart"> + ADD TO CART</button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="3">
-          <Card className="flip-card">
-            <CardBody className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={deadpool4} alt="Logo" />
-              </div>
-              <div className="flip-card-back">
-                <h4 className="cardTitle">DESCRIÇAO</h4>
-                <div className="col-12 float-right text">
-                  <p className="cardDesc">
-                    Deadpool is a film for the fans. The fans who wanted him just
-                    as lewd and crude in celluloid as he is in the comics, who
-                    suffered through both his and Reynolds' mistreatment in films
-                    past, and who flung desperate tweets 'round the internet when
-                    they heard that maybe, just maybe, they might get a loyal
-                    depiction if they begged hard enough.
-                  </p>
-                </div>
-                <button className="addToCart"> + ADD TO CART</button>
-              </div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="3">
-          <Card className="flip-card">
-            <CardBody className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={deadpool5} alt="Logo" />
-              </div>
-              <div className="flip-card-back"></div>
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="3">
-          <Card className="flip-card">
-            <CardBody className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={deadpool3} alt="Logo" />
-              </div>
-              <div className="flip-card-back">
-                <h4 className="cardTitle">DESCRIÇAO</h4>
-                <div className="col-12 float-right text">
-                  <p className="cardDesc">
-                    Deadpool is a film for the fans. The fans who wanted him just
-                    as lewd and crude in celluloid as he is in the comics, who
-                    suffered through both his and Reynolds' mistreatment in films
-                    past, and who flung desperate tweets 'round the internet when
-                    they heard that maybe, just maybe, they might get a loyal
-                    depiction if they begged hard enough.
-                  </p>
-                </div>
-                <button className="addToCart"> + ADD TO CART</button>
-              </div>
-              {/* <CardTitle className="cardTitle" >DESCRIÇAO</CardTitle>
-                
-                <CardText className="cardDesc">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                <Button>Button</Button> */}
-            </CardBody>
-          </Card>
-        </Col>
-        <Col xs="3">
-          <Card className="flip-card">
-            <CardBody className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={deadpool2} alt="Logo" />
-              </div>
-              <div className="flip-card-back">
-                <h4 className="cardTitle">DESCRIÇAO</h4>
-                <div className="col-12 float-right text">
-                  <p className="cardDesc">
-                    Deadpool is a film for the fans. The fans who wanted him just
-                    as lewd and crude in celluloid as he is in the comics, who
-                    suffered through both his and Reynolds' mistreatment in films
-                    past, and who flung desperate tweets 'round the internet when
-                    they heard that maybe, just maybe, they might get a loyal
-                    depiction if they begged hard enough.
-                  </p>
-                </div>
-                <button className="addToCart"> + ADD TO CART</button>
-              </div>
-              {/* <CardTitle className="cardTitle" >DESCRIÇAO</CardTitle>
-                
-                <CardText className="cardDesc">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                <Button>Button</Button> */}
-            </CardBody>
-          </Card>
-        </Col>
-      </CardGroup>
-    </div>
-  );
-};
+import axios from "axios";
+import { connect } from "react-redux";
 
-export default Grid;
+export default class Grid extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      status: true,
+      search: "",
+      comics: ""
+    };
+  }
+
+  handleInputChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  searchApi = async e => {
+    e.preventDefault();
+    this.setState({
+      status: false
+    });
+
+    const { search } = this.state;
+    const session = {
+      search
+    };
+
+    const comic = await axios
+      .post("http://localhost:3333/api/comics", session)
+      .then(response => {
+        return response.data;
+      });
+
+    const { results } = comic.data;
+
+    this.setState({
+      comics: results,
+      status: true
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <Form onSubmit={this.searchApi}>
+          <FormGroup className="searchForm">
+            <InputGroup>
+              <Input
+                type="text"
+                placeholder="Find your favorite Commic Story"
+                name="search"
+                id="search"
+                onChange={this.handleInputChange}
+              />
+              <InputGroupAddon addonType="append">
+                <Button color="danger" type="submit">
+                  {this.state.status === false && this.state.search ? (
+                    <div className="animate-flicker">
+                      <SearchIcon />
+                    </div>
+                  ) : (
+                    <div>Search</div>
+                  )}
+                </Button>
+              </InputGroupAddon>
+            </InputGroup>
+            <br />
+          </FormGroup>
+        </Form>
+        {this.state.comics ? (
+          <CardGroup className="Group">
+            {this.state.comics.map(comic => (
+              <Col xs="3" key={comic.id}>
+                <Card className="flip-card">
+                  <CardBody className="flip-card-inner">
+                    <div className="flip-card-front">
+                      <img
+                        src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+                        alt="Logo"
+                      />
+                    </div>
+                    <div className="flip-card-back">
+                      {comic.description ? (
+                        <div>
+                          <h4 className="cardTitle">DESCRICAO</h4>
+                          <div className="col-12 float-right text">
+                            <p className="cardDesc">{comic.description}</p>
+                          </div>
+                          <button className="addToCart"> + ADD TO CART</button>
+                        </div>
+                      ) : (
+                        <div className="col-centered">
+                          <h3>No Description available</h3>
+                        </div>
+                      )}
+                    </div>
+                  </CardBody>
+                </Card>
+              </Col>
+            ))}
+          </CardGroup>
+        ) : (
+          ""
+        )}
+      </div>
+    );
+  }
+}

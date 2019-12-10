@@ -3,6 +3,8 @@ import express from "express";
 import routes from "./routes";
 import cors from "cors";
 
+require('dotenv/config');
+
 import "./database";
 class App {
   constructor() {
@@ -10,6 +12,7 @@ class App {
     this.server.use(cors());
     this.middlewares();
     this.routes();
+    
   }
 
   middlewares() {
