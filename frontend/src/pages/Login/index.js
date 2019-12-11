@@ -26,7 +26,9 @@ export default class Login extends Component {
     const { email, password } = this.state;
 
     if(email === 'admin@gmail.com' && password === 'admin1234'){
+      localStorage.setItem("token",'token');
       this.props.history.push("/home");
+      return;
     }
     // const session = {
     //   email,
